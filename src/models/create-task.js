@@ -10,25 +10,31 @@ function CreateTask({ modal, toggle }) {
           padding: 30,
         }}
       >
-         
         <Modal
           isOpen={modal}
           toggle={toggle}
           modalTransition={{ timeout: 2000 }}
         >
+          <ModalHeader>
+            <h5>Title</h5>
+            <input type="text " className="pr-7 w-70vh" />
+          </ModalHeader>
+
           <ModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-            possimus magni saepe corrupti beatae incidunt placeat. Ipsam
-            quaerat, consequuntur minima, voluptates error incidunt dolore animi
-            excepturi facilis porro consectetur at.
+            <h5>Task</h5>
+            <input type="text" />
+            <div className="addbutton d-flex flex-row-reverse">
+              {/* <div className="none"></div> */}
+              <button className="btn btn-success p-2  m-1">Submit</button>
+            </div>
           </ModalBody>
         </Modal>
-        <Button color="primary" onClick={toggle}>
+        {/* <Button color="primary" onClick={toggle}>
           Open Modal
         </Button>
         <Button color="secondary" onClick={toggle}>
           Open Modal
-        </Button>
+        </Button> */}
       </div>
     </>
   );
